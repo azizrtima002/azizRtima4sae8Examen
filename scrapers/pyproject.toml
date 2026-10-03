@@ -1,0 +1,17 @@
+[project]
+name = "stagefinder-scrapers"
+version = "1.0.0"
+description = "Scrapers that aggregate Tunisian internship offers for StageFinder TN"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = ["ignore:The 'strip_cdata' option:DeprecationWarning"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]

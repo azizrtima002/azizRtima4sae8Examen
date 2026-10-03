@@ -1,0 +1,50 @@
+# One command to run everything locally:  docker compose up --build
+# Then open http://localhost:3000
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: stagefinder
+      POSTGRES_PASSWORD: stagefinder
+      POSTGRES_DB: stagefinder
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U stagefinder"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  # Applies the Prisma migrations, then exits.
+  migrate:
+    build: { context: ./web, target: migrator }
+    environment:
+      DATABASE_URL: postgresql://stagefinder:stagefinder@db:5432/stagefinder
+    depends_on:
+      db: { condition: service_healthy }
+
+  # Fills the database. Defaults to the offline demo source; run the real
+  # scrapers with:  SCRAPER_SOURCES=tanitjobs,keejob,emploi_nat docker compose run --rm scraper
+  scraper:
+    build: ./scrapers
+    environment:
+      DATABASE_URL: postgresql://stagefinder:stagefinder@db:5432/stagefinder
+      SCRAPER_SOURCES: ${SCRAPER_SOURCES:-demo}
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+
+  web:
+    build: { context: ./web, target: runner }
+    environment:
+      DATABASE_URL: postgresql://stagefinder:stagefinder@db:5432/stagefinder
+      JWT_SECRET: ${JWT_SECRET:-local-development-secret-change-me-please}
+      APP_URL: http://localhost:3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+
+volumes:
+  pgdata:

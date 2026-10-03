@@ -1,0 +1,357 @@
+{
+  "_comment": "Fictional but realistic offers used by the `demo` source (local development, CI, tests). Companies are invented. Includes 2 duplicates and 2 non-internship jobs on purpose.",
+  "offers": [
+    {
+      "title": "Stage PFE – Développeur Full-Stack React / Node.js",
+      "company": "Medina Soft",
+      "city": "Les Berges du Lac, Tunis",
+      "hours_ago": 3,
+      "description": "Dans le cadre de son programme PFE 2027, Medina Soft recherche un(e) stagiaire pour concevoir et développer une plateforme SaaS de gestion de flotte. Stack : React, TypeScript, Node.js, PostgreSQL, Docker. Vous serez encadré(e) par un tech lead et participerez aux rituels Scrum. Profil : élève ingénieur en informatique, bonne maîtrise de JavaScript, curiosité et autonomie. Durée : 4 à 6 mois, à partir de février. Gratification motivante.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-developpeur-full-stack-react-node-js"
+    },
+    {
+      "title": "PFE Data Science – Prévision de la demande",
+      "company": "Carthage Data Labs",
+      "city": "Technopole El Ghazala, Ariana",
+      "hours_ago": 7,
+      "description": "Projet de fin d'études : mise en place d'un modèle de prévision de la demande pour un acteur de la grande distribution. Missions : exploration des données, feature engineering, modèles de séries temporelles (Prophet, LightGBM), mise en production avec MLflow. Profil : ingénieur data / informatique, Python, SQL, bases en statistiques.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-data-science-prevision-de-la-demande"
+    },
+    {
+      "title": "Stage d'été – Assistant Marketing Digital",
+      "company": "Jasmin Cosmetics",
+      "city": "Sousse",
+      "hours_ago": 20,
+      "description": "Stage d'été de 2 mois (juillet-août) au sein de l'équipe marketing. Missions : animation des réseaux sociaux, suivi des campagnes Meta Ads, reporting hebdomadaire, participation aux shootings produits. Profil : étudiant(e) en marketing ou communication, créatif(ve), à l'aise avec Canva et Instagram.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-d-ete-assistant-marketing-digital"
+    },
+    {
+      "title": "Stage ouvrier – Maintenance industrielle",
+      "company": "Sahel Plast Industries",
+      "city": "Monastir",
+      "hours_ago": 28,
+      "description": "Stage ouvrier d'un mois au sein du service maintenance d'une usine d'injection plastique. Vous découvrirez la maintenance préventive et curative des presses, les règles HSE et l'organisation d'un atelier en 3x8. Ouvert aux étudiants de 1ère année cycle ingénieur (génie mécanique, électromécanique).",
+      "url": "https://example.org/stagefinder-demo/offres/stage-ouvrier-maintenance-industrielle"
+    },
+    {
+      "title": "PFE Génie Civil – Étude d'un bâtiment R+8",
+      "company": "BET Atlas Ingénierie",
+      "city": "Sfax",
+      "hours_ago": 30,
+      "description": "Projet de fin d'études en bureau d'études structure : conception et dimensionnement d'un immeuble R+8 avec deux sous-sols. Modélisation sur Robot Structural Analysis et Arche, plans de ferraillage, métrés. Profil : élève ingénieur génie civil, maîtrise d'AutoCAD.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-genie-civil-etude-d-un-batiment-r-8"
+    },
+    {
+      "title": "Stage PFE – Ingénieur DevOps / Cloud",
+      "company": "Nuage Tech",
+      "city": "Charguia 2, Tunis",
+      "hours_ago": 36,
+      "description": "Sujet PFE : industrialisation de la chaîne CI/CD et migration de microservices vers Kubernetes. Outils : GitLab CI, Terraform, Helm, Prometheus, Grafana. Profil : ingénieur informatique ou télécom avec un premier contact avec Linux et Docker.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-ingenieur-devops-cloud"
+    },
+    {
+      "title": "Stage PFE – Contrôle de gestion",
+      "company": "Banque Méditerranéenne de Financement",
+      "city": "Tunis",
+      "hours_ago": 44,
+      "description": "Stage de fin d'études au sein de la direction du contrôle de gestion : construction de tableaux de bord de rentabilité par agence, automatisation du reporting mensuel sous Power BI, analyse des écarts budgétaires. Profil : master en finance, contrôle de gestion ou audit.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-controle-de-gestion"
+    },
+    {
+      "title": "Stage d'été – Développeur Mobile Flutter",
+      "company": "Appsfactory TN",
+      "city": "Ennasr, Ariana",
+      "hours_ago": 50,
+      "description": "Stage d'été de 8 semaines pour participer au développement d'une application mobile de livraison en Flutter. Vous travaillerez sur l'intégration d'API REST, la gestion d'état et les tests. Profil : étudiant en informatique (2e année ingénieur ou licence).",
+      "url": "https://example.org/stagefinder-demo/offres/stage-d-ete-developpeur-mobile-flutter"
+    },
+    {
+      "title": "PFE Systèmes embarqués – Supervision IoT d'une serre",
+      "company": "AgriSense",
+      "city": "Sousse",
+      "hours_ago": 58,
+      "description": "Projet de fin d'études : conception d'un système embarqué de supervision (capteurs d'humidité, température, électrovannes) basé sur ESP32, LoRaWAN et un tableau de bord web. Profil : génie électrique, électronique ou mécatronique, langage C.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-systemes-embarques-supervision-iot-d-une-serre"
+    },
+    {
+      "title": "Stage PFE – Ressources Humaines & Marque employeur",
+      "company": "Groupe Horizon Distribution",
+      "city": "Ben Arous",
+      "hours_ago": 64,
+      "description": "Stage de fin d'études au sein de la DRH : refonte du processus d'onboarding, enquête de satisfaction collaborateurs et actions de marque employeur sur LinkedIn. Profil : master RH ou psychologie du travail, excellentes capacités rédactionnelles.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-ressources-humaines-marque-employeur"
+    },
+    {
+      "title": "Stage PFE – Ingénieur Qualité (Lean Six Sigma)",
+      "company": "Cablerie du Cap Bon",
+      "city": "Nabeul",
+      "hours_ago": 70,
+      "description": "Projet de fin d'études en génie industriel : réduction du taux de rebut sur une ligne de câblage automobile par une démarche DMAIC. Outils : AMDEC, SPC, 5S. Profil : élève ingénieur génie industriel, rigueur et sens du terrain.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-ingenieur-qualite-lean-six-sigma"
+    },
+    {
+      "title": "Stage d'été – Assistant Comptable",
+      "company": "Cabinet Ben Salem Audit & Conseil",
+      "city": "Sfax",
+      "hours_ago": 76,
+      "description": "Stage d'été de 6 semaines : saisie et lettrage comptable, préparation des déclarations fiscales mensuelles, participation aux missions d'audit légal. Profil : licence en comptabilité ou finance, maîtrise d'Excel.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-d-ete-assistant-comptable"
+    },
+    {
+      "title": "PFE – Application de gestion des stocks avec Odoo",
+      "company": "Elite ERP Solutions",
+      "city": "Megrine, Ben Arous",
+      "hours_ago": 82,
+      "description": "Sujet PFE : développement de modules Odoo 17 pour la gestion des stocks multi-dépôts et l'intégration avec un terminal mobile de lecture code-barres. Python, PostgreSQL, XML. Profil : licence ou ingénieur informatique.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-application-de-gestion-des-stocks-avec-odoo"
+    },
+    {
+      "title": "Stage PFE – UX/UI Designer",
+      "company": "Pixel & Co Studio",
+      "city": "La Marsa, Tunis",
+      "hours_ago": 90,
+      "description": "Projet de fin d'études : refonte UX d'une application bancaire. Recherche utilisateur, wireframes, prototypes Figma, tests d'utilisabilité et design system. Profil : étudiant(e) en design, multimédia ou IHM avec un portfolio.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-ux-ui-designer"
+    },
+    {
+      "title": "Stage ouvrier – Chantier de travaux publics",
+      "company": "Entreprise Générale Bâtir Sud",
+      "city": "Gabès",
+      "hours_ago": 100,
+      "description": "Stage ouvrier sur un chantier de voirie et réseaux divers : découverte de l'organisation du chantier, suivi des terrassements, contrôle qualité des matériaux. Étudiants en génie civil (1re année).",
+      "url": "https://example.org/stagefinder-demo/offres/stage-ouvrier-chantier-de-travaux-publics"
+    },
+    {
+      "title": "PFE Télécoms – Optimisation du réseau 5G",
+      "company": "Telnet Radio Systems",
+      "city": "Tunis",
+      "hours_ago": 110,
+      "description": "Projet de fin d'études : étude de dimensionnement et optimisation radio d'un réseau 5G NSA. Analyse de KPI, outils de planification, scripts Python d'automatisation. Profil : ingénieur télécommunications.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-telecoms-optimisation-du-reseau-5g"
+    },
+    {
+      "title": "Stage PFE – Business Developer International",
+      "company": "Olive Gold Export",
+      "city": "Sfax",
+      "hours_ago": 120,
+      "description": "Stage de fin d'études : étude de marché export (Europe, Golfe) pour une gamme d'huile d'olive premium, prospection B2B et participation à la préparation d'un salon international. Profil : école de commerce, anglais courant.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-business-developer-international"
+    },
+    {
+      "title": "Stage d'été – Technicien Électricité Industrielle",
+      "company": "Énergie Verte Solaire",
+      "city": "Kairouan",
+      "hours_ago": 130,
+      "description": "Stage d'été : participation à l'installation et à la mise en service de centrales photovoltaïques en toiture, câblage des onduleurs, mesures et contrôles. Étudiants en génie électrique.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-d-ete-technicien-electricite-industrielle"
+    },
+    {
+      "title": "PFE Cybersécurité – SOC & détection d'intrusions",
+      "company": "SecureOps Tunisia",
+      "city": "Centre Urbain Nord, Tunis",
+      "hours_ago": 140,
+      "description": "Projet de fin d'études : déploiement d'un SOC open source (Wazuh, Suricata, TheHive), écriture de règles de détection et playbooks de réponse aux incidents. Profil : ingénieur sécurité informatique ou réseaux.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-cybersecurite-soc-detection-d-intrusions"
+    },
+    {
+      "title": "Stage PFE – Conception mécanique d'un convoyeur",
+      "company": "Mecatech Industrie",
+      "city": "Bizerte",
+      "hours_ago": 150,
+      "description": "Projet de fin d'études : conception et dimensionnement d'un convoyeur à bande pour une ligne d'emballage, modélisation sur SolidWorks, calculs RDM, dossier de fabrication. Profil : génie mécanique.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-conception-mecanique-d-un-convoyeur"
+    },
+    {
+      "title": "Stage PFE – Chargé(e) de communication événementielle",
+      "company": "Dar Events",
+      "city": "Hammamet, Nabeul",
+      "hours_ago": 160,
+      "description": "Stage de fin d'études : préparation d'un festival culturel, plan de communication, relations presse, gestion des partenaires et contenus réseaux sociaux. Profil : master communication ou marketing.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-charge-e-de-communication-evenementielle"
+    },
+    {
+      "title": "PFE Biotechnologie – Contrôle qualité microbiologique",
+      "company": "Laboratoires Pharmaghreb",
+      "city": "Ariana",
+      "hours_ago": 175,
+      "description": "Projet de fin d'études au laboratoire de contrôle qualité : validation d'une méthode d'analyse microbiologique, rédaction des procédures selon les BPF. Profil : ingénieur ou master en biotechnologie, biologie ou pharmacie.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-biotechnologie-controle-qualite-microbiologique"
+    },
+    {
+      "title": "Stage PFE – Développeur Java Spring Boot (FinTech)",
+      "company": "PayFlow",
+      "city": "Les Berges du Lac, Tunis",
+      "hours_ago": 190,
+      "description": "Sujet : développement d'un moteur de rapprochement de paiements en microservices Spring Boot, Kafka et PostgreSQL. Tests automatisés, revue de code, méthodologie agile. Profil : ingénieur informatique, Java.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-developpeur-java-spring-boot-fintech"
+    },
+    {
+      "title": "Stage d'été – Réception & Front Office",
+      "company": "Hôtel Les Dunes",
+      "city": "Djerba",
+      "hours_ago": 200,
+      "description": "Stage d'été en hôtellerie : accueil des clients, check-in/check-out, gestion des réservations sur PMS, coordination avec les services. Profil : étudiant(e) en tourisme ou hôtellerie, français et anglais.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-d-ete-reception-front-office"
+    },
+    {
+      "title": "PFE – Tableau de bord RH sous Power BI",
+      "company": "Groupe Horizon Distribution",
+      "city": "Ben Arous",
+      "hours_ago": 215,
+      "description": "Projet de fin d'études : conception d'un entrepôt de données RH et de tableaux de bord Power BI (absentéisme, turnover, masse salariale). Profil : informatique décisionnelle, SQL, BI.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-tableau-de-bord-rh-sous-power-bi"
+    },
+    {
+      "title": "Stage PFE – Juriste droit des affaires",
+      "company": "Cabinet Khelifi & Associés",
+      "city": "Tunis",
+      "hours_ago": 230,
+      "description": "Stage de fin d'études : recherche juridique, rédaction de contrats commerciaux, veille réglementaire et assistance aux opérations de constitution de sociétés. Profil : master en droit des affaires.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-juriste-droit-des-affaires"
+    },
+    {
+      "title": "Stage d'été – Logistique & Supply Chain",
+      "company": "Trans Med Logistics",
+      "city": "Radès, Ben Arous",
+      "hours_ago": 245,
+      "description": "Stage d'été : suivi des flux import/export au port de Radès, gestion documentaire douanière, optimisation des tournées de livraison. Profil : génie industriel, logistique ou commerce international.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-d-ete-logistique-supply-chain"
+    },
+    {
+      "title": "PFE Intelligence Artificielle – Chatbot RAG en arabe tunisien",
+      "company": "Carthage Data Labs",
+      "city": "Technopole El Ghazala, Ariana",
+      "hours_ago": 260,
+      "description": "Projet de fin d'études : conception d'un assistant conversationnel de type RAG capable de comprendre le dialecte tunisien. NLP, embeddings, évaluation, API FastAPI. Profil : ingénieur IA / data science.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-intelligence-artificielle-chatbot-rag-en-arabe-tunisien"
+    },
+    {
+      "title": "Stage PFE – Ingénieur Méthodes Automobile",
+      "company": "Composants Auto Sahel",
+      "city": "Sousse",
+      "hours_ago": 280,
+      "description": "Stage de fin d'études : amélioration des gammes de fabrication et équilibrage de lignes d'assemblage. Chronométrage, MTM, VSM. Profil : génie industriel ou mécanique.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-ingenieur-methodes-automobile"
+    },
+    {
+      "title": "Stage d'été – Développeur Web PHP / Laravel",
+      "company": "Webkom Agency",
+      "city": "Monastir",
+      "hours_ago": 300,
+      "description": "Stage d'été de 2 mois : développement de sites web et d'un back-office Laravel pour des clients PME. Profil : étudiant(e) en informatique, bases en PHP et MySQL.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-d-ete-developpeur-web-php-laravel"
+    },
+    {
+      "title": "PFE – Audit financier et commissariat aux comptes",
+      "company": "Cabinet Ben Salem Audit & Conseil",
+      "city": "Sfax",
+      "hours_ago": 330,
+      "description": "Stage de fin d'études : participation à des missions d'audit légal, revue des cycles ventes et achats, tests de contrôle interne. Profil : master audit ou expertise comptable.",
+      "url": "https://example.org/stagefinder-demo/offres/pfe-audit-financier-et-commissariat-aux-comptes"
+    },
+    {
+      "title": "Stage PFE – Automatisme et supervision SCADA",
+      "company": "Sotumetal Automation",
+      "city": "Zaghouan",
+      "hours_ago": 360,
+      "description": "Projet de fin d'études : automatisation d'une station de traitement des eaux (automate Siemens S7-1500, TIA Portal), supervision WinCC. Profil : génie électrique / automatique.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-automatisme-et-supervision-scada"
+    },
+    {
+      "title": "Stage d'été – Community Manager",
+      "company": "Jasmin Cosmetics",
+      "city": "Sousse",
+      "hours_ago": 380,
+      "description": "Stage d'été : création de contenus, planification éditoriale, gestion de la communauté et veille concurrentielle. Profil : marketing digital, sens créatif.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-d-ete-community-manager"
+    },
+    {
+      "title": "Stage PFE – Architecte d'intérieur",
+      "company": "Atelier Nour Design",
+      "city": "Sousse",
+      "hours_ago": 420,
+      "description": "Projet de fin d'études : aménagement d'espaces de bureaux, plans, rendus 3D (SketchUp, Lumion), sélection de matériaux. Profil : étudiant(e) en architecture d'intérieur ou design d'espace.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-architecte-d-interieur"
+    },
+    {
+      "title": "Stage PFE – Ingénieur Test Logiciel / QA Automation",
+      "company": "Medina Soft",
+      "city": "Tunis",
+      "hours_ago": 470,
+      "description": "Sujet PFE : mise en place d'une stratégie de tests automatisés end-to-end avec Playwright et intégration dans la CI. Profil : ingénieur informatique, rigueur et goût pour la qualité.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-ingenieur-test-logiciel-qa-automation"
+    },
+    {
+      "title": "Stage PFE – Commercial Grands Comptes",
+      "company": "Telnet Radio Systems",
+      "city": "Tunis",
+      "hours_ago": 520,
+      "description": "Stage de fin d'études au sein de la direction commerciale : prospection, préparation d'offres techniques et commerciales, suivi CRM. Profil : école de commerce ou ingénieur avec appétence commerciale.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-commercial-grands-comptes"
+    },
+    {
+      "title": "Stage ouvrier – Production agroalimentaire",
+      "company": "Délices du Nord",
+      "city": "Béja",
+      "hours_ago": 560,
+      "description": "Stage ouvrier d'un mois sur une ligne de production laitière : découverte des process, hygiène, contrôle qualité. Profil : étudiants en agroalimentaire ou génie des procédés.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-ouvrier-production-agroalimentaire"
+    },
+    {
+      "title": "Stage d'été – Data Analyst junior",
+      "company": "Banque Méditerranéenne de Financement",
+      "city": "Tunis",
+      "hours_ago": 600,
+      "description": "Stage d'été : nettoyage et analyse de données clients, construction de tableaux de bord et présentation des résultats. SQL, Python ou Excel avancé.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-d-ete-data-analyst-junior"
+    },
+    {
+      "title": "Stage PFE – Développeur .NET / Angular",
+      "company": "Softline Gafsa",
+      "city": "Gafsa",
+      "hours_ago": 640,
+      "description": "Projet de fin d'études : développement d'une application de gestion des interventions techniques (ASP.NET Core, Angular, SQL Server). Profil : licence ou ingénieur informatique.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-developpeur-net-angular"
+    },
+    {
+      "title": "Stage PFE – Ingénieur Énergie (efficacité énergétique)",
+      "company": "Énergie Verte Solaire",
+      "city": "Tunis",
+      "hours_ago": 700,
+      "description": "Projet de fin d'études : audit énergétique d'un site industriel et proposition d'un plan d'actions d'efficacité énergétique. Profil : génie énergétique ou électrique.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-ingenieur-energie-efficacite-energetique"
+    },
+    {
+      "title": "Stage PFE - Développeur Full Stack React/Node.js (H/F)",
+      "company": "MEDINA SOFT SARL",
+      "city": "Tunis",
+      "hours_ago": 5,
+      "description": "Programme PFE 2027 : plateforme SaaS de gestion de flotte avec React, TypeScript et Node.js.",
+      "url": "https://example.org/stagefinder-demo/offres/stage-pfe-developpeur-full-stack-react-node-js-h-f"
+    },
+    {
+      "title": "PFE DATA SCIENCE – PRÉVISION DE LA DEMANDE",
+      "company": "Carthage Data Labs Tunisie",
+      "city": "Ariana",
+      "hours_ago": 9,
+      "description": null,
+      "url": "https://example.org/stagefinder-demo/offres/pfe-data-science-prevision-de-la-demande"
+    },
+    {
+      "title": "Ingénieur DevOps Senior – CDI",
+      "company": "Nuage Tech",
+      "city": "Tunis",
+      "hours_ago": 12,
+      "description": "Nous recrutons un ingénieur DevOps confirmé (5 ans d'expérience minimum) en CDI.",
+      "url": "https://example.org/stagefinder-demo/offres/ingenieur-devops-senior-cdi"
+    },
+    {
+      "title": "Responsable commercial export",
+      "company": "Olive Gold Export",
+      "city": "Sfax",
+      "hours_ago": 40,
+      "description": "Poste en CDI pour un responsable commercial export confirmé.",
+      "url": "https://example.org/stagefinder-demo/offres/responsable-commercial-export"
+    }
+  ]
+}

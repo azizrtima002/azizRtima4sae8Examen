@@ -1,0 +1,129 @@
+// StageFinder TN — database schema.
+//
+// Prisma owns the schema; the Python scrapers write to `offers` and
+// `scraper_runs` with plain SQL, which is why every table and column is
+// mapped to an explicit snake_case name and ids/timestamps default in SQL.
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum OfferType {
+  PFE // projet de fin d'études
+  SUMMER // stage d'été
+  WORKER // stage ouvrier
+  OTHER // stage dont le type n'est pas précisé
+}
+
+enum ApplicationStatus {
+  INTERESTED
+  APPLIED
+  INTERVIEW
+  OFFER
+  REJECTED
+}
+
+enum RunStatus {
+  SUCCESS
+  FAILED
+}
+
+model Offer {
+  id                 String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title              String
+  company            String
+  /// Governorate slug (see src/lib/taxonomy.ts), null when unknown.
+  city               String?
+  /// Domain slug (see src/lib/taxonomy.ts), null when unknown.
+  domain             String?
+  type               OfferType
+  descriptionExcerpt String?       @map("description_excerpt")
+  sourceName         String        @map("source_name")
+  sourceUrl          String        @map("source_url")
+  publishedAt        DateTime      @map("published_at") @db.Timestamptz(3)
+  /// Last time a scraper saw the offer.
+  scrapedAt          DateTime      @map("scraped_at") @db.Timestamptz(3)
+  /// First time a scraper saw the offer (used by email alerts).
+  createdAt          DateTime      @default(now()) @map("created_at") @db.Timestamptz(3)
+  isActive           Boolean       @default(true) @map("is_active")
+  /// sha256(normalized title | normalized company): deduplication key.
+  contentHash        String        @unique @map("content_hash")
+  /// Lowercased, accent-free text used by the search bar.
+  searchText         String        @map("search_text")
+  applications       Application[]
+
+  @@index([isActive, publishedAt(sort: Desc)])
+  @@index([createdAt])
+  @@index([city])
+  @@index([domain])
+  @@index([type])
+  @@index([searchText(ops: raw("gin_trgm_ops"))], type: Gin, map: "offers_search_text_trgm_idx")
+  @@map("offers")
+}
+
+model User {
+  id            String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  email         String        @unique
+  passwordHash  String        @map("password_hash")
+  createdAt     DateTime      @default(now()) @map("created_at") @db.Timestamptz(3)
+  applications  Application[]
+  savedSearches SavedSearch[]
+
+  @@map("users")
+}
+
+/// A card of the personal Kanban board.
+model Application {
+  id           String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId       String            @map("user_id") @db.Uuid
+  offerId      String            @map("offer_id") @db.Uuid
+  status       ApplicationStatus @default(INTERESTED)
+  notes        String            @default("")
+  followUpDate DateTime?         @map("follow_up_date") @db.Date
+  createdAt    DateTime          @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt    DateTime          @updatedAt @map("updated_at") @db.Timestamptz(3)
+  user         User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  offer        Offer             @relation(fields: [offerId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, offerId])
+  @@index([userId, status])
+  @@map("applications")
+}
+
+/// A saved search that triggers email alerts.
+model SavedSearch {
+  id             String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId         String     @map("user_id") @db.Uuid
+  keywords       String     @default("")
+  city           String?
+  domain         String?
+  type           OfferType?
+  lastNotifiedAt DateTime?  @map("last_notified_at") @db.Timestamptz(3)
+  createdAt      DateTime   @default(now()) @map("created_at") @db.Timestamptz(3)
+  user           User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("saved_searches")
+}
+
+/// One row per scraper execution: powers the "last successful sync" badge.
+model ScraperRun {
+  id           String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  source       String
+  startedAt    DateTime  @map("started_at") @db.Timestamptz(3)
+  finishedAt   DateTime? @map("finished_at") @db.Timestamptz(3)
+  status       RunStatus
+  offersFound  Int       @default(0) @map("offers_found")
+  offersNew    Int       @default(0) @map("offers_new")
+  errorMessage String?   @map("error_message")
+
+  @@index([source, startedAt(sort: Desc)])
+  @@index([status, startedAt(sort: Desc)])
+  @@map("scraper_runs")
+}

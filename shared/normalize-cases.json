@@ -1,0 +1,12 @@
+{
+  "_comment": "Shared test vectors: the Python scrapers (search_text) and the web app (search queries) MUST normalize text identically. Both test suites load this file.",
+  "cases": [
+    { "input": "Stage PFE – Développeur Full-Stack (H/F)", "expected": "stage pfe developpeur full stack h f" },
+    { "input": "  Ingénieur   Génie Civil  ", "expected": "ingenieur genie civil" },
+    { "input": "Société Tunisienne d'Électricité", "expected": "societe tunisienne d electricite" },
+    { "input": "ÉTÉ 2026 / Stage d’été", "expected": "ete 2026 stage d ete" },
+    { "input": "Data_Science & IA", "expected": "data science ia" },
+    { "input": "تدريب مهندس", "expected": "تدريب مهندس" },
+    { "input": "", "expected": "" }
+  ]
+}
